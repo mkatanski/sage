@@ -1,7 +1,7 @@
 {
   "name": "sage",
   "version": "8.3.0",
-  "author": "Ben Word <ben@benword.com>",
+  "author": "Ben Word <ben@benword.com>, Michał Katański <contact@mkatanski.com>",
   "homepage": "https://roots.io/sage/",
   "private": true,
   "repository": {
@@ -26,9 +26,20 @@
     "node": ">= 0.12.0",
     "npm": ">=2.1.5"
   },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.5",
+    "jquery": "^2.1.4"
+  },
   "devDependencies": {
     "asset-builder": "^1.1.0",
     "browser-sync": "^2.8.2",
+    "bootstrap-sass-loader": "^1.0.9",
+    "css-loader": "^0.21.0",
+    "file-loader": "^0.8.4",
+    "node-sass": "^3.3.3",
+    "sass-loader": "^3.0.0",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.6",
     "del": "^1.2.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
@@ -53,6 +64,19 @@
     "minimist": "^1.1.3",
     "run-sequence": "^1.1.2",
     "traverse": "^0.6.6",
-    "wiredep": "^2.2.2"
+    "wiredep": "^2.2.2",
+    "amd-define-factory-patcher-loader": "^1.0.0",
+    "css-loader": "^0.21.0",
+    "exports-loader": "^0.6.2",
+    "expose-loader": "^0.7.0",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "file-loader": "^0.8.4",
+    "imports-loader": "^0.6.5",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^3.0.0",
+    "script-loader": "^0.6.1",
+    "sizzle": "^2.2.1",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.6"
   }
 }
