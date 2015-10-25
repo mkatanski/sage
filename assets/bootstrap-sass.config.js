@@ -3,11 +3,11 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   // Use preBootstrapCustomizations to change $brand-primary. Ensure this preBootstrapCustomizations does not
   // depend on other bootstrap variables.
-  preBootstrapCustomizations: './_pre-bootstrap-customizations.scss',
+  preBootstrapCustomizations: './assets/styles/_pre-bootstrap-customizations.scss',
 
   // Use bootstrapCustomizations to utilize other sass variables defined in preBootstrapCustomizations or the
   // _variables.scss file. This is useful to set one customization value based on another value.
-  bootstrapCustomizations: './_bootstrap-customizations.scss',
+  bootstrapCustomizations: './assets/styles/_bootstrap-customizations.scss',
 
   mainSass: './assets/styles/main.scss',
   verbose: false,

@@ -18,7 +18,7 @@ module.exports = {
   cache: true,
   entry: [
     './assets/scripts/main.js',
-    'bootstrap-sass!./bootstrap-sass.config.js'
+    'bootstrap-sass!./assets/bootstrap-sass.config.js'
   ],
   output: {
    path: path.join(__dirname, './dist'),
