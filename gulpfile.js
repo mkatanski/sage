@@ -14,6 +14,9 @@ var plumber      = require('gulp-plumber');
 var rev          = require('gulp-rev');
 var runSequence  = require('run-sequence');
 var uglify       = require('gulp-uglify');
+var gutil        = require('gulp-util');
+var webpack      = require('webpack');
+var webpackConf  = require('./webpack.config.js');
 
 // `path` - Paths to base asset directories. With trailing slashes.
 // - `path.source` - Path to the source files. Default: `assets/`
@@ -87,11 +90,25 @@ gulp.task('watch', function() {
   gulp.watch(['bower.json', 'assets/manifest.json'], ['build']);
 });
 
+
+// ### webpack
+// `gulp webpack` - Run webpack compilation of scripts and styles for the project.
+gulp.task('webpack', function(callback) {
+    // run webpack
+    webpack(webpackConf, function(err, stats) {
+        if(err) throw new gutil.PluginError('webpack', err);
+        gutil.log('[webpack]', stats.toString({
+            // output options
+        }));
+        callback();
+    });
+});
+
 // ### Build
 // `gulp build` - Run all the build tasks but don't clean up beforehand.
 // Generally you should be running `gulp` instead of `gulp build`.
 gulp.task('build', function(callback) {
-  //runSequence(callback);
+  runSequence('webpack', callback);
 });
 
 // ### Wiredep
